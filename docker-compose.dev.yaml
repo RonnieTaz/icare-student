@@ -9,6 +9,6 @@ services:
     user: ${USER_ID}:${USER_GID}
     ports:
       - "4200:4200"
-    command: ["npm", "start"]
+    command: "npm run start -- --host 0.0.0.0 --disable-host-check"
     volumes:
       - ./ui:/usr/src/app
