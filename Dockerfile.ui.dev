@@ -1,0 +1,12 @@
+FROM node:14-alpine
+
+COPY ./docker/entrypoint.dev.sh /opt/entrypoint.dev.sh
+
+RUN chmod +x /opt/entrypoint.dev.sh
+
+WORKDIR /usr/src/app
+
+ENTRYPOINT ["/opt/entrypoint.dev.sh"]
+
+HEALTHCHECK --interval=30s --timeout=3s \
+  CMD curl -f http://localhost:4200/ || exit 1

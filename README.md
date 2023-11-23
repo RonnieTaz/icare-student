@@ -66,3 +66,29 @@ Upload the omod to openmrs.
 ## Running end-to-end tests
 
 ## Further help
+
+## For Windows system UI/Angular
+
+Download Docker desktop or Docker Engine from docker if you use linux or Mac OS.
+
+### For CLI use
+
+Navigate to application root folder and then start the compose process:
+
+```bash
+USER_ID="$(id -u)" USER_GID="$(id -g)" docker compose -f docker-compose.dev.yaml up -d
+```
+
+That is all
+
+### For Windows / Docker Desktop use
+
+Open docker desktop and make sure it is running in the tray.
+
+Open your project in a cmd or powershell terminal. Git bash can also be used. This can be done by typing cmd in the address bar within your project directory or right-clicking on an empty space and selecting *git bash here*
+
+Once in your terminal of your choice, type the following and hit enter:
+
+```bash
+docker compose -f docker-compose.dev.yaml up -d
+```
